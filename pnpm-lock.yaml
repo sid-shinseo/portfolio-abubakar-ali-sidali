@@ -200,9 +200,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.21(postcss@8.5.6)
-      esbuild:
-        specifier: ^0.25.0
-        version: 0.25.10
       pnpm:
         specifier: ^10.15.1
         version: 10.18.1
@@ -7218,3 +7215,4 @@ snapshots:
   zod@4.1.12: {}
 
   zwitch@2.0.4: {}
+
