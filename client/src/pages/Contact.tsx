@@ -279,7 +279,7 @@ export default function Contact() {
                   <p className="text-sm text-muted-foreground">@sid-shinseo</p>
                 </div>
               </a>
-
+{/* Social Links 
               <a
                 href="https://linkedin.com"
                 target="_blank"
@@ -292,6 +292,7 @@ export default function Contact() {
                   <p className="text-sm text-muted-foreground">pas encore disponible</p>
                 </div>
               </a>
+              */}
             </div>
           </Card>
         </div>
