@@ -84,7 +84,7 @@ export default function Contact() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {/* Email Card */}
+            {/* Email Card 
             <Card className="p-6 border border-border bg-accent/50 hover:bg-accent/70 transition-colors">
               <div className="flex items-start gap-4">
                 <Mail className="h-8 w-8 text-blue-600 flex-shrink-0 mt-1" />
@@ -103,7 +103,7 @@ export default function Contact() {
               </div>
             </Card>
 
-            {/* Phone Card */}
+            
             <Card className="p-6 border border-border bg-accent/50 hover:bg-accent/70 transition-colors">
               <div className="flex items-start gap-4">
                 <Phone className="h-8 w-8 text-purple-600 flex-shrink-0 mt-1" />
@@ -122,7 +122,7 @@ export default function Contact() {
               </div>
             </Card>
 
-            {/* Location Card */}
+            
             <Card className="p-6 border border-border bg-accent/50 hover:bg-accent/70 transition-colors">
               <div className="flex items-start gap-4">
                 <MapPin className="h-8 w-8 text-indigo-600 flex-shrink-0 mt-1" />
@@ -137,13 +137,13 @@ export default function Contact() {
             </Card>
           </div>
 
-          {/* Contact Form */}
+          
           <Card className="p-8 border border-border mb-12">
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <MessageSquare className="h-6 w-6 text-blue-600" />
               Formulaire de Contact
             </h2>
-
+*/}
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
