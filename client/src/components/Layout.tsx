@@ -120,7 +120,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <footer className="border-t border-border bg-background mt-16">
         <div className="container py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <p>&copy; 2024 Portfolio BTS SIO. Tous droits réservés.</p>
+            <p>&copy; 2026 ABUBAKAR ALI Sid Ali  Portfolio BTS SIO. Tous droits réservés.</p>
             <Link href="/mentions-legales">
               <span className="hover:text-blue-600 transition-colors cursor-pointer underline">
                 Mentions légales
