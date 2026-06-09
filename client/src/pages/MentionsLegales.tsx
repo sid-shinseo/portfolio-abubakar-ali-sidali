@@ -18,7 +18,6 @@ export default function MentionsLegales() {
               <p className="text-muted-foreground">
                 <span className="font-medium">Nom :</span> ABUBAKAR ALI Sid Ali<br/>
                 <span className="font-medium">Adresse :</span> Alsace, France<br/>
-                <span className="font-medium">Email :</span> contact@portfolio-bts-sio.com
               </p>
             </div>
 
