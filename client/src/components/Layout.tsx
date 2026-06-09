@@ -25,6 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { label: "Veille technologique", href: "/veille-technologique" },
     { label: "Compétences E4", href: "/competences" },
     { label: "Contact", href: "/contact" },
+    { label: "Mentions légales", href: "/mentions-legales" },
   ];
 
   return (
@@ -33,8 +34,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="border-b border-border bg-background sticky top-0 z-50">
         <div className="container py-4 flex items-center justify-between">
           <Link href="/">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity">
-              Portfolio Abubakar Ali Sid Ali
+            <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
+              <div className="h-10 w-10 flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 rounded font-bold text-white text-sm">
+                SA
+              </div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Portfolio BTS SIO
+              </div>
             </div>
           </Link>
 
@@ -114,8 +120,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Footer */}
       <footer className="border-t border-border bg-background mt-16">
-        <div className="container py-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 Portfolio BTS SIO. Tous droits réservés.</p>
+        <div className="container py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+            <p>&copy; 2024 Portfolio BTS SIO. Tous droits réservés.</p>
+            <Link href="/mentions-legales">
+              <span className="hover:text-blue-600 transition-colors cursor-pointer underline">
+                Mentions légales
+              </span>
+            </Link>
+          </div>
         </div>
       </footer>
     </div>
