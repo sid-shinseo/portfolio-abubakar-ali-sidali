@@ -14,12 +14,12 @@ export default function Competences() {
         <Card className="p-8 border border-border mb-8">
           <h2 className="text-2xl font-bold mb-4 text-blue-600">Évaluation des compétences acquises</h2>
           <p className="text-base leading-relaxed text-muted-foreground mb-6">
-            Le tableau E4 ci-dessous présente l'évaluation détaillée des compétences que j'ai acquises au cours de ma formation BTS SIO, option SISR. Ce document synthétise les compétences développées en 1ère et 2ème année, validées par mes expériences professionnelles et mes projets réalisés.
+            Le tableau E5 ci-dessous présente l'évaluation détaillée des compétences que j'ai acquises au cours de ma formation BTS SIO, option SISR. Ce document synthétise les compétences développées en 1ère et 2ème année, validées par mes expériences professionnelles et mes projets réalisés.
           </p>
           
           <div className="flex items-center gap-4 p-6 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg border border-blue-600/50">
             <div>
-              <h3 className="font-semibold text-blue-400 mb-2">Télécharger le tableau E4 complet</h3>
+              <h3 className="font-semibold text-blue-400 mb-2">Télécharger le tableau E5 complet</h3>
               <p className="text-sm text-muted-foreground mb-4">
                 Fichier Excel détaillé avec l'évaluation de toutes les compétences du référentiel BTS SIO
               </p>
