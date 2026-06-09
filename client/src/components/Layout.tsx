@@ -66,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
             <Link href="/competences">
               <span className="text-sm font-medium hover:text-blue-600 transition-colors cursor-pointer">
-                Compétences E4
+                Compétences E5
               </span>
             </Link>
             <Link href="/contact">
