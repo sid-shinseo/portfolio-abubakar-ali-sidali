@@ -11,6 +11,7 @@ import Stage2 from "./pages/Stage2";
 import VeilleT from "./pages/VeilleT";
 import Competences from "./pages/Competences";
 import Contact from "./pages/Contact";
+import MentionsLegales from "./pages/MentionsLegales";
 import Layout from "./components/Layout";
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
         <Route path={"/veille-technologique"} component={VeilleT} />
         <Route path={"/competences"} component={Competences} />
         <Route path={"/contact"} component={Contact} />
+        <Route path={"/mentions-legales"} component={MentionsLegales} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
