@@ -236,18 +236,19 @@ export default function Contact() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/sid-shinseo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors"
               >
                 <Github className="h-6 w-6 text-gray-700 dark:text-gray-300" />
                 <div>
+                  
                   <p className="font-semibold">GitHub</p>
-                  <p className="text-sm text-muted-foreground">@yourprofile</p>
+                  <p className="text-sm text-muted-foreground">@sid-shinseo</p>
                 </div>
               </a>
-
+{/* Social Links 
               <a
                 href="https://linkedin.com"
                 target="_blank"
@@ -260,6 +261,7 @@ export default function Contact() {
                   <p className="text-sm text-muted-foreground">Votre profil</p>
                 </div>
               </a>
+              */}
             </div>
           </Card>
         </div>
