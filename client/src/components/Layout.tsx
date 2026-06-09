@@ -35,11 +35,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container py-4 flex items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
-              <div className="h-10 w-10 flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 rounded font-bold text-white text-sm">
-                SA
-              </div>
+              
               <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Portfolio BTS SIO
+                ABUBAKAR Sid Ali - Portfolio BTS SIO
               </div>
             </div>
           </Link>
