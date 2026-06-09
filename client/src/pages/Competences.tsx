@@ -7,7 +7,7 @@ export default function Competences() {
     <div className="min-h-screen bg-background text-foreground">
       <div className="container py-12">
         <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Tableau de compétences E4
+          Tableau de compétences E5
         </h1>
 
         {/* Introduction */}
