@@ -37,7 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
               
               <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                ABUBAKAR Sid Ali - Portfolio BTS SIO
+                ABUBAKAR Sid Ali - Portfolio
               </div>
             </div>
           </Link>
