@@ -83,67 +83,12 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {/* Email Card 
-            <Card className="p-6 border border-border bg-accent/50 hover:bg-accent/70 transition-colors">
-              <div className="flex items-start gap-4">
-                <Mail className="h-8 w-8 text-blue-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Email</h3>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Pour toute question ou demande
-                  </p>
-                  <a
-                    href="mailto:your.email@example.com"
-                    className="text-blue-600 hover:text-blue-700 font-medium break-all"
-                  >
-                    your.email@example.com
-                  </a>
-                </div>
-              </div>
-            </Card>
-
-            
-            <Card className="p-6 border border-border bg-accent/50 hover:bg-accent/70 transition-colors">
-              <div className="flex items-start gap-4">
-                <Phone className="h-8 w-8 text-purple-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Téléphone</h3>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Disponible du lundi au vendredi
-                  </p>
-                  <a
-                    href="tel:+33612345678"
-                    className="text-purple-600 hover:text-purple-700 font-medium"
-                  >
-                    +33 6 12 34 56 78
-                  </a>
-                </div>
-              </div>
-            </Card>
-
-            
-            <Card className="p-6 border border-border bg-accent/50 hover:bg-accent/70 transition-colors">
-              <div className="flex items-start gap-4">
-                <MapPin className="h-8 w-8 text-indigo-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold mb-2">Localisation</h3>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Basé en Alsace, France
-                  </p>
-                  <p className="font-medium">Colmar, 68000</p>
-                </div>
-              </div>
-            </Card>
-          </div>
-
           
           <Card className="p-8 border border-border mb-12">
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <MessageSquare className="h-6 w-6 text-blue-600" />
               Formulaire de Contact
             </h2>
-*/}
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
