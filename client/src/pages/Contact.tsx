@@ -1,11 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Github, Linkedin, MessageSquare } from "lucide-react";
 import { toast } from "sonner";
 
 const FORMSPREE_ID = "mrbowdey";
-const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,18 +15,6 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-
-  // Charger le script reCAPTCHA
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -50,12 +37,7 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Obtenir le token reCAPTCHA
-      const token = await (window as any).grecaptcha.execute(RECAPTCHA_SITE_KEY, {
-        action: "submit",
-      });
-
-      // Envoyer le formulaire avec le token
+      // Envoyer le formulaire
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
         headers: {
@@ -66,7 +48,6 @@ export default function Contact() {
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          "g-recaptcha-response": token,
         }),
       });
 
@@ -100,6 +81,60 @@ export default function Contact() {
             <p className="text-lg text-muted-foreground">
               Vous avez une question ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter. Je serai ravi de vous répondre dans les plus brefs délais.
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {/* Email Card */}
+            <Card className="p-6 border border-border bg-accent/50 hover:bg-accent/70 transition-colors">
+              <div className="flex items-start gap-4">
+                <Mail className="h-8 w-8 text-blue-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold mb-2">Email</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Pour toute question ou demande
+                  </p>
+                  <a
+                    href="mailto:your.email@example.com"
+                    className="text-blue-600 hover:text-blue-700 font-medium break-all"
+                  >
+                    your.email@example.com
+                  </a>
+                </div>
+              </div>
+            </Card>
+
+            {/* Phone Card */}
+            <Card className="p-6 border border-border bg-accent/50 hover:bg-accent/70 transition-colors">
+              <div className="flex items-start gap-4">
+                <Phone className="h-8 w-8 text-purple-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold mb-2">Téléphone</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Disponible du lundi au vendredi
+                  </p>
+                  <a
+                    href="tel:+33612345678"
+                    className="text-purple-600 hover:text-purple-700 font-medium"
+                  >
+                    +33 6 12 34 56 78
+                  </a>
+                </div>
+              </div>
+            </Card>
+
+            {/* Location Card */}
+            <Card className="p-6 border border-border bg-accent/50 hover:bg-accent/70 transition-colors">
+              <div className="flex items-start gap-4">
+                <MapPin className="h-8 w-8 text-indigo-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold mb-2">Localisation</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Basé en Alsace, France
+                  </p>
+                  <p className="font-medium">Colmar, 68000</p>
+                </div>
+              </div>
+            </Card>
           </div>
 
           {/* Contact Form */}
@@ -178,19 +213,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* reCAPTCHA Notice */}
-              <p className="text-xs text-muted-foreground text-center">
-                Ce site est protégé par reCAPTCHA et les{" "}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">
-                  Politiques de confidentialité
-                </a>{" "}
-                et{" "}
-                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">
-                  Conditions d'utilisation
-                </a>{" "}
-                de Google s'appliquent.
-              </p>
-
               {/* Submit Button */}
               <Button
                 type="submit"
@@ -214,7 +236,7 @@ export default function Contact() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a
-                href="https://github.com/sid-shinseo"
+                href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors"
@@ -222,10 +244,10 @@ export default function Contact() {
                 <Github className="h-6 w-6 text-gray-700 dark:text-gray-300" />
                 <div>
                   <p className="font-semibold">GitHub</p>
-                  <p className="text-sm text-muted-foreground">@sid-shinseo</p>
+                  <p className="text-sm text-muted-foreground">@yourprofile</p>
                 </div>
               </a>
-{/* Social Links 
+
               <a
                 href="https://linkedin.com"
                 target="_blank"
@@ -235,10 +257,9 @@ export default function Contact() {
                 <Linkedin className="h-6 w-6 text-blue-600" />
                 <div>
                   <p className="font-semibold">LinkedIn</p>
-                  <p className="text-sm text-muted-foreground">pas encore disponible</p>
+                  <p className="text-sm text-muted-foreground">Votre profil</p>
                 </div>
               </a>
-              */}
             </div>
           </Card>
         </div>
