@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       submenu: stagesItems,
     },
     { label: "Veille technologique", href: "/veille-technologique" },
-    { label: "Compétences E4", href: "/competences" },
+    { label: "Compétences E5", href: "/competences" },
     { label: "Contact", href: "/contact" },
     { label: "Mentions légales", href: "/mentions-legales" },
   ];
